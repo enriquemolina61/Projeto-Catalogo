@@ -1,4 +1,4 @@
-import { init } from "express/lib/application";
+// import { init } from "express/lib/application";
 import Sequelize from "sequelize";
 import { connection } from "../database/connection.js";
 
@@ -44,7 +44,7 @@ export const filmes = connection.define(
   }
 );
 
-function initTable() {
-  filmes.async();
-}
-initTable();
+// function initTable() {
+//   filmes.async();
+// }
+// initTable();
