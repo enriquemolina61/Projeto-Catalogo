@@ -1,3 +1,4 @@
+import { init } from "express/lib/application";
 import Sequelize from "sequelize";
 import { connection } from "../database/connection.js";
 
@@ -39,6 +40,11 @@ export const filmes = connection.define(
     freezeTableName: true,
     timestamps: false,
     createdAt: false,
-    updatedAt: false
+    updatedAt: false,
   }
 );
+
+function initTable() {
+  filmes.async();
+}
+initTable();

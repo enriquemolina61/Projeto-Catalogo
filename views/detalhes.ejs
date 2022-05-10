@@ -11,14 +11,24 @@
     <%- include('./partials/header.ejs') %> 
     <main>
         <section id="details_container">
-            <p>Nome:</p> <%= filmesDetalhes.nome %> 
+           <p id="titulo"> <%= filmesDetalhes.nome %> </p>
             <iframe <%= filmesDetalhes.iframe %> ></iframe>
             <table>
                 <thead>
-                    <th>Detalhes</th>
+                    <th colspan="2">Detalhes</th>
                 </thead>
                 <tbody>
                     <tr>
+                        <td>Diretor</td>
+                        <td><%= filmesDetalhes.diretor %> </td>
+                    </tr>
+                    <tr>
+                        <td>Duração</td>
+                        <td><%= filmesDetalhes.duracao %> minutos </td>
+                    </tr>
+                    <tr>
+                        <td>Ano</td>
+                        <td> <%= filmesDetalhes.ano %> </td>
                     </tr>
                 </tbody>
             </table>

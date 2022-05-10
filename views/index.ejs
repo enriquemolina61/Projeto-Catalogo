@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Index</title>
 </head>
+
 <body>
     <%- include('./partials/header.ejs') %> 
     <main>
-    <h1></h1>
+    <h1 id="inicio">Catálogo de Filmes</h1>
     <div id="sub_header"></div>
     <section id="card_container">
         <% listFilmes.forEach(element => { %>
@@ -24,6 +25,10 @@
            </div>
         </article>
     </a>
+    <div class="btn_cont">
+        <a href="/delete/<%= element.id %> "><i class="fa-solid fa-ban"></i></a>
+        <a href="/editar/<%= element.id %> "><i class="fa-solid fa-pencil"></i></a>
+    </div>
         <% }) %>   
     </section>
     </main>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Criar</title>
+</head>
+<body>
+    <%- include('./partials/header.ejs') %> 
+    <main>
+        <section id="form_criar">
+            <form method="post" action="/criar">
+                <fieldset>
+                <legend id="texto"> Adicionar Filme </legend>
+
+                <fieldset class="field">
+                <input type="text" name="nome" required>
+                <label for="nome">Nome</label>
+                
+                </fieldset>
+
+                <fieldset class="field">
+                <input type="text" name="diretor" required>
+                <label for="diretor">Diretor</label>
+                </fieldset>
+
+                <fieldset class="field">       
+                <input type="url" name="img" required>
+                <label for="img">Imagem</label>
+                </fieldset>
+
+                <fieldset class="field">               
+                <input type="number" name="duracao" required>
+                <label for="duracao">Duração (min)</label>
+                </fieldset>
+
+                <fieldset class="field">
+                <input type="text" name="ano" required>
+                <label for="ano">Ano</label>
+                </fieldset>
+
+                <fieldset class="field">
+                <input type="text" name="iframe" required>
+                <label for="iframe">Trailer</label>
+                </fieldset>
+                <div id="bt_div">
+                <button id="btadd" type="submit">Adicionar</button>
+                </div>
+            </fieldset>
+            </form>
+        </section>
+    </main>
+    
+    <%- include('./partials/footer.ejs') %> 
+   
+</body>
+</html>
